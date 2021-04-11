@@ -16,8 +16,8 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/Multiplication/Program.cs" />
+      <option value="$PROJECT_DIR$/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r1IRrQfVg10WO22TuvJYh0r7SC" />
@@ -81,6 +81,9 @@
       <workItem from="1618137194641" duration="2855000" />
       <workItem from="1618140448457" duration="93000" />
       <workItem from="1618142976778" duration="302000" />
+      <workItem from="1618144040981" duration="833000" />
+      <workItem from="1618146195155" duration="162000" />
+      <workItem from="1618146427988" duration="130000" />
     </task>
     <task id="LOCAL-00001" summary="FirstTry">
       <created>1618138927514</created>

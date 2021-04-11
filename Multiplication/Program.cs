@@ -4,7 +4,7 @@ namespace Multiplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var options = new ConfigurationOptions();
             options.EndPoints.Add("localhost", 6379);
@@ -12,17 +12,18 @@ namespace Multiplication
             var redis = ConnectionMultiplexer.Connect(options);
             var db = redis.GetDatabase();
 
-            const string keyFrist = "testFirstKey";
+            const string keyFirst = "testFirstKey";
             const string keySecond = "testSecondKey";
 
-            var firstMultiplier = System.Convert.ToDouble(db.StringGet(keyFrist));
-            var secondMultiplier = System.Convert.ToDouble(db.StringGet(keySecond));
-            
-            
-            System.Console.WriteLine("Press F to get multiplication");
-            if (System.Console.ReadKey().KeyChar == 70)
+            while (true)
             {
-                GetMultiplication(firstMultiplier, secondMultiplier);
+                System.Console.WriteLine("Press F to get multiplication");
+                if (System.Console.ReadKey().KeyChar == 70)
+                {
+                    var firstMultiplier = System.Convert.ToDouble(db.StringGet(keyFirst));
+                    var secondMultiplier = System.Convert.ToDouble(db.StringGet(keySecond));
+                    GetMultiplication(firstMultiplier, secondMultiplier);
+                }
             }
         }
 

@@ -19,10 +19,13 @@ namespace RedisConnecion
             const string keySecond = "testSecondKey";
             
             //Ввод значений множителей и их последующая записаь в бд
-            System.Console.WriteLine("Enter the first multiplier:");
-            db.StringSet(keyFirst, System.Convert.ToDouble(System.Console.ReadLine()));
-            System.Console.WriteLine("Enter the second multiplier:");
-            db.StringSet(keySecond, System.Convert.ToDouble(System.Console.ReadLine()));
+            while (true)
+            {
+                System.Console.WriteLine("Enter the first multiplier (if it's double enter in format ' *,* '):");
+                db.StringSet(keyFirst, System.Console.ReadLine());
+                System.Console.WriteLine("Enter the second multiplier (if it's double enter in format ' *,* '):");
+                db.StringSet(keySecond, System.Console.ReadLine());
+            }
         }
     }
 }
