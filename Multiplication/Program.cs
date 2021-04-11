@@ -20,9 +20,17 @@ namespace Multiplication
                 System.Console.WriteLine("Press F to get multiplication");
                 if (System.Console.ReadKey().KeyChar == 70)
                 {
-                    var firstMultiplier = System.Convert.ToDouble(db.StringGet(keyFirst));
-                    var secondMultiplier = System.Convert.ToDouble(db.StringGet(keySecond));
-                    GetMultiplication(firstMultiplier, secondMultiplier);
+                    try
+                    {
+                        var firstMultiplier = System.Convert.ToDouble(db.StringGet(keyFirst));
+                        var secondMultiplier = System.Convert.ToDouble(db.StringGet(keySecond));
+                        GetMultiplication(firstMultiplier, secondMultiplier);
+                    }
+                    catch
+                    {
+                        System.Console.WriteLine("\nThere are incorrect data in database" +
+                                                 "\nTry do that after correct the error");
+                    }
                 }
             }
         }
